@@ -78,6 +78,7 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+					<finalName>podpah-app</finalName>
 				</configuration>
 			</plugin>
 		</plugins>

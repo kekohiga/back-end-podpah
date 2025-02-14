@@ -9,8 +9,10 @@ public class CorsConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**")
-                .allowedOrigins("http://localhost:4200")
-                .allowedMethods("GET", "POST", "DELETE", "PUT");
+        registry.addMapping("/**") // Permite todas as rotas
+                .allowedOrigins("https://alexapodpah.shop") // Permitir apenas este domínio
+                .allowedMethods("GET", "POST", "DELETE", "PUT", "OPTIONS") // Métodos permitidos
+                .allowedHeaders("*") // Permitir todos os headers
+                .allowCredentials(true); // Permitir envio de credenciais (cookies, auth headers)
     }
 }
